@@ -34,8 +34,10 @@ myApp.controller('mainController', ['$scope', '$routeParams', 'myService', '$log
         number: 1,
         string: "Just about ..."
     };
-    $scope.naomi = { name: 'Naomi', address: '1600 Amphitheatre' };
-    $scope.igor = { name: 'Igor', address: '123 Somewhere' };
+
+    $scope.get_data = function(data) {
+        return data.link + ', ' + data.number + ', ' + data.string + '.'
+    }
 
 }]);
 
@@ -58,7 +60,9 @@ myApp.directive('superTag', function() {
         scope: {
             link: "@",
             number: "@",
-            string: "@"
+            string: "@",
+            doogan: "=",
+            dooganFunction : "&"
         },
         // , replace: true
         // scope: {
