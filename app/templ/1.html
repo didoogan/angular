@@ -1,12 +1,11 @@
 <h2>First page</h2>
 <input type="text" ng-model="name" />
-   <!--<super-tag-->
-        <!--data-link="{{ data.link }}"-->
-        <!--data-number="{{ data.number }}"-->
-        <!--data-string="{{ data.string }}">-->
-    <!--</super-tag>-->
-
-    <super-tag data-object="data"></super-tag>
+   <super-tag
+        link="{{ data.link }}"
+        number="{{ data.number }}"
+        string="{{ data.string }}">
+    </super-tag>
+    <!--<super-tag doogan="data" ></super-tag>-->
 
     <!--<div super-tag-->
          <!--data-link="{{ data.link }}"-->
@@ -14,3 +13,4 @@
          <!--data-string="{{ data.string }}" >-->
     <!--</div>-->
     <!--<div class="super-tag"></div>-->
+

@@ -34,6 +34,9 @@ myApp.controller('mainController', ['$scope', '$routeParams', 'myService', '$log
         number: 1,
         string: "Just about ..."
     };
+    $scope.naomi = { name: 'Naomi', address: '1600 Amphitheatre' };
+    $scope.igor = { name: 'Igor', address: '123 Somewhere' };
+
 }]);
 
 
@@ -48,20 +51,20 @@ myApp.controller('secondController', ['$scope', '$routeParams', 'myService',
 
 }]);
 
+
 myApp.directive('superTag', function() {
     return {
-        restrict: "AECM",
-        templateUrl: "directives/supertag.html"
-        // ,
-        // scope: {
-        //     dataLink: "@",
-        //     dataNumber: "@",
-        //     dataString: "@"
-        // }
+        restrict: "ECM",
+        scope: {
+            link: "@",
+            number: "@",
+            string: "@"
+        },
         // , replace: true
-        , scope: {
-            dataObject: "="
-        }
+        // scope: {
+        //     doogan: "="
+        // },
+        templateUrl: "directives/supertag.html"
     }
 }) ;
 
